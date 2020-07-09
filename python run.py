@@ -5,7 +5,7 @@ import random
 client = discord.Client()
 
 # 생성된 토큰을 입력해준다.
-token = "NzMwMDc5NTQ2OTI5NDQ3MDEy.XwcfBA.1Lf4qDS5tF85APrHlY9aopApEWc"
+token = "NzMwMDc5NTQ2OTI5NDQ3MDEy.Xwdb9g.FRscnD-HMoj0Ea3_RBUVdySRwOY"
 
 # 봇이 구동되었을 때 보여지는 코드
 # @client.event
