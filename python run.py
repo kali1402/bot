@@ -1,12 +1,15 @@
 import asyncio
 import discord
 import random
+import os
 
 client = discord.Client()
 
 # 생성된 토큰을 입력해준다.
-token = "NzMwMDc5NTQ2OTI5NDQ3MDEy.Xwdb9g.FRscnD-HMoj0Ea3_RBUVdySRwOY"
-
+token_path = os.path.dirname(os.path.abspath(__file__))+"/token.txt"
+t = open(token_path, "r", encoding="utf-8")
+token = t.read().split()[0]
+print("Token_key : ", token)
 # 봇이 구동되었을 때 보여지는 코드
 # @client.event
 # async def on_ready():
@@ -17,7 +20,7 @@ token = "NzMwMDc5NTQ2OTI5NDQ3MDEy.Xwdb9g.FRscnD-HMoj0Ea3_RBUVdySRwOY"
 
 
 # 봇이 특정 메세지를 받고 인식하는 코드
-@client.event
+@ client.event
 async def on_message(message):
     유저첫문장채팅 = message.content.startswith
     유저채팅 = message.content
@@ -66,7 +69,7 @@ async def on_message(message):
             await 봇채팅(강화확률+"% 강화에 실패하셨습니다.")
 
 
-@client.event
+@ client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='!명령어'))
 
